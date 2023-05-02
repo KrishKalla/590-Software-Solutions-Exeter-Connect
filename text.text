@@ -1,1 +1,10 @@
 Token: 6333~6sJWbBtnXlJHdgr7MFtWP1axcnk1A7SFdP7hkdCwk2eOlVc5ebpMoDOMgal9avSx
+MAC command for curl: curl https://canvas.exeter.edu/api/v1/users/self -H "Authorization: Bearer 6333~6sJWbBtnXlJHdgr7MFtWP1axcnk1A7SFdP7hkdCwk2eOlVc5ebpMoDOMgal9avSx"
+
+curl -X POST \
+     https://canvas.exeter.edu/api/v1/accounts/1/reports/provisioning_csv \
+     -H 'Authorization: Bearer 6333~6sJWbBtnXlJHdgr7MFtWP1axcnk1A7SFdP7hkdCwk2eOlVc5ebpMoDOMgal9avSx' \
+     -H 'Content-Type: multipart/form-data' \
+     -F 'parameters[users]=true' \
+     -F 'parameters[courses]=true' \
+     -F 'parameters[enrollments]=true'
