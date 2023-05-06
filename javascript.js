@@ -11,3 +11,6 @@ const options = {
 fetch (url, options)
     .then( response => response.json())
     .then( response => console.log(JSON.stringify(response)))
+
+
+
