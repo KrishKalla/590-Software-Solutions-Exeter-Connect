@@ -1,4 +1,5 @@
 url = "https://canvas.exeter.edu/api/v1/courses?per_page=9999";
+let response = [];
 
 const options = {
     method: "GET",
