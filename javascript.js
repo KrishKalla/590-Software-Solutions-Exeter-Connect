@@ -7,10 +7,13 @@ const options = {
     },
 }
 
+let numCourses;
+
 fetch(canvasURL, options)
     .then( response => response.json())
     .then( response => getCurrentCourses(response))
     .then( response => getCourseLinks(response))
+
 
 
 
@@ -24,6 +27,7 @@ function getCurrentCourses(response) {
 }
 
 function getCourseNames(response) {
+    numCourses = response.length;
     for (let i = 0; i < response.length; i++) {
         console.log(response[i].name)
     }
@@ -48,8 +52,17 @@ function getCourseLinks(response) {
     for (let i = 0; i < response.length; i++) {
         let id = (response[i].id)
         let courseName = (response[i].name)
-        let string = courseName + ': ' + 'https://canvas.exeter.edu/courses/' + id;
-        console.log(string)
+        let webString = 'https://canvas.exeter.edu/api/v1/courses/' + id + '/assignments?per_page=999';
+        let consoleString = courseName + ': ' + 'https://canvas.exeter.edu/courses/' + id;
+        getCourseInfo(webString);
+        console.log(webString);
+        console.log(consoleString);
     }
     return response;
+}
+
+function getCourseInfo (webString) {
+    fetch(webString, options) 
+        .then( response => response.json())
+        .then( response => console.log(response))
 }
