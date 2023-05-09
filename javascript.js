@@ -7,23 +7,3 @@ const options = {
         
     },
 };
-
-fetch (url, options)
-    // .then( response => response.json())
-    // .then( response => console.log(JSON.stringify(response)))
-    .then(async(response) => {
-        let clone = response.clone();
-        let res = await clone.json();
-        console.log(res);
-        return response.blob()
-    })
-    .then(blob => {
-        var url = window.URL.createObjectURL(blob);
-        var a = document.createElement('a');
-        a.href = url;
-        a.download = "jsonfile.txt";
-        a.click();
-    })
-    .catch(function(err) {
-        console.error(err);
-    })
