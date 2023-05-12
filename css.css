@@ -298,3 +298,7 @@ body.dark li:hover{
     border-radius: 40px;
     background-color: var(--nav-color);
 }
+
+.md-disallow-past-event-creation .mbsc-readonly-event {
+    opacity: .6;
+}
