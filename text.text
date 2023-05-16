@@ -8,3 +8,72 @@ curl -X POST \
      -F 'parameters[users]=true' \
      -F 'parameters[courses]=true' \
      -F 'parameters[enrollments]=true'
+
+
+html calendar stuff
+<div class="main calendar container">
+        <div class="calendar screen">
+            <div class="calendar toolbar">
+                <div class="toolbar chunk">
+                    <div class="month traversal buttons">
+                        <button type = 'button' title = 'Previous Month' aria-pressed="false" class = 'c-prev-button c-button c-button-primary'>
+                            <span class = 'c-icon c-icon-chevron-left'>
+                                ::before
+                            </span>
+                        </button>
+                        <button type = 'button' title = 'Next Month' aria-pressed="false" class = 'c-next-button c-button c-button-primary'>
+                            <span class = 'c-icon c-icon-chevron-right'>
+                                ::before
+                            </span>
+                        </button>
+                    </div>
+                    <button type = 'button' title = 'Today' disabled aria-pressed = 'false' class = 'c-today-button c-button c-button-primary'>today</button>
+                </div>
+
+
+                <div class="toolbar chunk">
+                    
+                </div>
+                <div class="toolbar chunk">
+
+                </div>
+            </div>
+            <div class="calendar">
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+const goPrev = document.querySelector(".calendar-previous");
+const goNext = document.querySelector(".calendar-next");
+const goToday = document.querySelector(".calendar-today");
+
+goPrev.addEventListener('click', previousMonth);
+goNext.addEventListener('click', nextMonth);
+goToday.addEventListener('click', currentMonth);
+
+function previousMonth(){
+    month--;
+}
+
+function nextMonth(){
+    month++
+}
+
+function currentMonth(){
+    month = date.getMonth();
+}
+
+function disableButton(){
+    button.disabled = true;
+    button.value = 'Disabled';
+    setTimeout(() => {
+        button.disabled = false;
+        button.value = Enabled
+    }, 1000);
+}

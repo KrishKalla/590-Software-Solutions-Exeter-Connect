@@ -13,9 +13,13 @@
     --body-color: #GGGGGG;
     --nav-color: #BEBEBE;
     --side-nav: #BEBEBE;
-    --text-color: #FFF;
+    --text-color: #010718;
     --search-bar: #F2F2F2;
     --search-text: #010718;
+    --calendar-header: #9A9A9A;
+    --calendar-body: #BEBEBE;
+    --calendar-button-color: #ABABAB;
+    --calendar-button-border: #282828;
 }
 
 body{
@@ -30,6 +34,10 @@ body.dark{
     --text-color: #CCC;
     --search-bar: #242526;
     --search-text: #CCC;
+    --calendar-header: #242424;
+    --calendar-body: #353535;
+    --calendar-button-color: #595959;
+    --calendar-button-border: #DCDCDC;
 }
 
 /* START OF NAVIGATION BAR CSS */
@@ -285,3 +293,5 @@ body.dark li:hover{
 .widget3.active .extension{
     opacity: 1;
 }
+
+

@@ -61,3 +61,4 @@ function removeHTML (HTMLstr){
     HTMLstr = HTMLstr.replace(/<[^>]+>/g, '').replace(/&nbsp;/g, ' ').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&').replace(/&quot;/g, '\"').replace(/&apos;/g, '\''); // Removes tags such as <p> and </p>
     return HTMLstr;
 }
+

@@ -1,0 +1,129 @@
+:root{
+    --calendar-border: #696969;
+}
+
+body.dark{
+    --calendar-border: #FEFEFE;
+}
+
+
+/* START OF CALENDAR CSS */
+
+.calendar-main-container {
+    position: fixed;
+    top: 50%;
+    left: 40%;
+    transform: translate(0, -50%);
+
+    width: 55%;
+    height: 80%;
+    border-radius: 40px;
+    background-color: var(--calendar-body)
+}
+
+.calendar-main-container .calendar-header {
+    position: relative;
+    height: 13.26%;
+    width: 100%;
+    border-radius: 40px 40px 0px 0px;
+
+    background-color: var(--calendar-header);
+}
+
+
+.calendar-header .month {
+    position: relative;
+    text-align: center;
+    top: 0px;
+    right: -50%;
+    height: 100px;
+    width: 300px;
+    transform: translate(-50%, 0);
+
+    color: var(--logo-color);
+    font-size: 60px;
+    font-weight:700;
+}
+
+.calendar-header .button {
+    border: none;
+    height: 50px;
+    width: 75px;
+    border-radius: 10px;
+
+    background-color: var(--calendar-button-color);
+
+    font-size: 26px;
+    font-weight: bold;
+    color: var(--text-color);
+    
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition-duration: 0.1s;
+    cursor: pointer;
+}
+
+.calendar-header .calendar-previous{
+    position: relative;
+    top: 70px;
+    left: 83%;
+    transform: translate(0, -50%);
+}
+
+.calendar-header .calendar-next {
+    position: relative;
+    top: 70px;
+    left: 84%;
+    transform: translate(0, -50%);
+}
+
+.calendar-previous:hover {
+    border: 2px solid var(--calendar-button-border);
+}
+
+.calendar-next:hover {
+    border: 2px solid var(--calendar-button-border);
+}
+
+
+.calendar-header .calendar-today {
+    position: relative;
+    top: 70px;
+    left: -6%;
+    transform: translate(0, -50%);
+
+    width: 150px;
+}
+
+.calendar-today:hover {
+    border: 2px solid var(--calendar-button-border);
+}
+
+.calendar-body {
+    padding: 30px;
+    margin: 0 auto;
+    color: var(--text-color)
+}
+
+.calendar-body .weekdays {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 26px;
+    font-weight: 500;
+    color: var(--text-color)
+}
+.calendar-body .days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 123px 123px 123px 123px 123px 123px;
+    gap: 5px;
+}
+
+.days div {
+    border: 1px solid var(--calendar-border);
+    border-radius: 12px;
+    padding: 5px;
+    text-align: center;
+}
