@@ -1,4 +1,4 @@
-canvasURL = "https://canvas.exeter.edu/api/v1/courses?per_page=100";
+canvasURL = "https://canvas.exeter.edu/api/v1/courses?per_page=4";
 
 const options = {
     method: "GET",
@@ -7,7 +7,7 @@ const options = {
     },
 }
 
-const events = [];
+
 
 let numCourses;
 
@@ -117,7 +117,12 @@ function currentMonth() {
 }
 
 
+const events = [
+    
 
+];
+
+let courseEvents = [];
 
 
 // Function to generate calendar
@@ -129,7 +134,7 @@ function generateCalendar() {
   
     // Get current month and year
     const currentDate = new Date();
-    const currentMonth = currentDate.getMonth();
+    const currentMonth = month;
     const currentYear = currentDate.getFullYear();
   
     // Get first day of the month
@@ -148,14 +153,16 @@ function generateCalendar() {
   
     // Generate calendar days
     for (let day = 1; day <= lastDay; day++) {
-      const date = new Date(currentYear, currentMonth, day);
+      const date = new Date(currentYear, month, day);
       const calendarDay = document.createElement("div");
       calendarDay.textContent = day;
   
       // Check if the current date has an event
-      const event = events.find((event) =>
-        event.date.toDateString() === date.toDateString()
-      );
+      if (events.length != 0){
+        const event = events.find((event) =>
+            event.date === date.toDateString()
+        );
+    }
   
       if (event) {
         calendarDay.classList.add("event");
