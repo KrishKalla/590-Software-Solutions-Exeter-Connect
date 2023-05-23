@@ -1,0 +1,33 @@
+<!-- http://localhost:3000/outlook/outlook.html -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="outlook.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="email-list-container">
+        <h1>Emails</h1>
+        <ul id="emailsList"></ul>
+      </div>
+      <div class="email-details-container">
+        <h2>Email Details</h2>
+        <div id="emailDetailsContainer">
+          <div id="emailDetails"></div>
+        </div>
+      </div>
+      <div class="buttons-container">
+        <div class="button-wrapper">
+          <button id="loginBtn" disabled>Login</button>
+          <button id="fetchEmailsBtn" disabled>Fetch Emails</button>
+        </div>
+      </div>
+    </div>
+    <script src="https://alcdn.msauth.net/browser/2.14.1/js/msal-browser.min.js"></script>
+    <script src="outlook.js"></script>
+  </body>
+</html>
+
+
+
