@@ -2,6 +2,7 @@
   "dependencies": {
     "@azure/identity": "^3.2.2",
     "@microsoft/microsoft-graph-client": "^3.0.5",
+    "cheerio": "^1.0.0-rc.12",
     "isomorphic-fetch": "^3.0.0",
     "readline-sync": "^1.4.10"
   }
