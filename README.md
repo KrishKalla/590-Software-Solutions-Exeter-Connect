@@ -8,7 +8,7 @@ Instructions for Installation of Libraries
 Opening the LocalHost Server in Browser
 1. Open Browser (Chrome, Edge, Opera, etc.)
 2. type "http://localhost:3000/Home/home.html" - will be redirected to home page
-	for canvas's functionality to work, extra steps need to be taken due to CORS policy issues
+	--> for canvas's functionality to work, extra steps need to be taken due to CORS policy issues
 	1. open command prompt in windows (mac does not work with this)
 	2. type "start chrome --disable-web-security --user-data-dir=C:\my-chrome-data\data"
 	3. Type "http://localhost:3000/Home/home.html" into the opened browser - note: no other pages will work in this mode due to security policies
