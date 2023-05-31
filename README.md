@@ -1,6 +1,6 @@
 # CSC 590 Final Project 2023 Spring
 
-Instructions for Installation og Libraries
+Instructions for Installation of Libraries
 1. run 'npm install' in terminal at the address of code
 	1. run 'npm fund' if necessary
 2. run node server.js at address of code
