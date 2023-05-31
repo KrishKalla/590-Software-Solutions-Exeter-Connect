@@ -292,7 +292,7 @@ strong {
     margin-top: 20px;
     position: absolute;
     text-align: center;
-    top: 400px;
+    top: 625px;
     left: 100px;
     width: 30%;
   }
@@ -361,5 +361,19 @@ strong {
   
   #task-list li button:hover {
     background-color: #b30300;
+  }
+
+  .weatherwidget-io {
+    width: 30% !important;
+    height: 210px !important;
+    border-radius: 40px;
+    background-color: var(--calendar-body);
+    border: none;
+    top: 400px;
+    left: 100px;
+    padding: 10px;
+    margin-top: 20px;
+    position: absolute;
+    text-align: center;
   }
   
