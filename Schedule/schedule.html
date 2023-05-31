@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="navbar/navbar.css">
+    <link rel="stylesheet" href="schedule.css">
+
+    <!--  BOXICONS CSS  -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+</head>
+<body>
+
+    <nav>
+        <div class = "nav-bar">
+            <span class="logo"><a href = "#">Exeter Connect+</a></span>  <!--LOGO-->
+  
+            <div class="menu">
+                <ul class="nav-links">
+                    <li><a href = "http://localhost:3000/Home/home.html">Home</a></li>
+                    <li><a href = "http://localhost:3000/Schedule/schedule.html">Schedule</a></li>
+                    <li><a href = "http://localhost:3000/outlook/outlook.html">Outlook</a></li>
+                    <li><a href = "#">Contact Devs.</a></li>
+                </ul>
+            </div>
+  
+            <div class="darkLight-searchBox">
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i> <!--DARK SYMBOL-->
+                    <i class='bx bx-sun sun' ></i> <!--LIGHT SYMBOL-->
+                </div>
+  
+                <div class="searchBox">
+                    <div class="searchToggle">
+                        <i class='bx bx-x cancel' ></i> <!--CANCEL SYMBOL-->
+                        <i class='bx bx-search search' ></i> <!--SEARCH SYMBOL-->
+                    </div>
+                    <div class="search-field">
+                        <input type = "text" placeholder="Search...">
+                        <i class='bx bx-search' ></i> <!--SEARCH SYMBOL ON SEARCH BAR-->
+                    </div>
+                </div>
+            </div>
+        </div>
+      </nav> 
+
+    <iframe class = 'schedule' src = "https://outlook.office365.com/owa/calendar/d0cef5466e4a4226bdec68e2e205f8bc@exeter.edu/df14ed108b064e198fd38b9833d8191616207921468098914306/calendar.html"scrolling="no" width="100%" height='1000px' frameborder="0"></iframe>
+    <script src="navbar/navbar.js"></script>
+</body>
+</html>

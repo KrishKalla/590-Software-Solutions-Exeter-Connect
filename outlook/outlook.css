@@ -1,0 +1,143 @@
+:root{ 
+    --logo-color: maroon; 
+    --body-color: #GGGGGG;
+    --nav-color: #BEBEBE;
+    --side-nav: #BEBEBE;
+    --text-color: #010718;
+    --search-bar: #F2F2F2;
+    --search-text: #010718;
+    --calendar-header: #9A9A9A;
+    --calendar-body: #BEBEBE;
+    --calendar-button-color: #ABABAB;
+    --calendar-button-border: #282828;
+  }
+  
+  body{
+    height: 100vh;
+    background-color: var(--body-color);
+    margin: 20px;
+  }
+  
+  body.dark{
+    --body-color: #18191A;
+    --nav-color: #242526;
+    --side-nav: #242526;
+    --text-color: #CCC;
+    --search-bar: #242526;
+    --search-text: #CCC;
+    --calendar-header: #242424;
+    --calendar-body: #353535;
+    --calendar-button-color: #595959;
+    --calendar-button-border: #DCDCDC;
+  }
+  
+  h1 {
+    color: var(--text-color);
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  
+  
+  .container {
+    display: flex;
+    z-index: 2;
+  }
+  
+  .email-list-container {
+    flex: 1;
+    margin-right: 20px;
+    margin-top: 75px;
+    overflow-y: auto;
+    color: var(--text-color)
+  }
+  
+  .email-details-container {
+    flex: 2;
+    position: sticky;
+    top: 110px;
+    height: calc(100vh - 80px); /* Adjust height based on your needs */
+    overflow-y: auto;
+  }
+  
+  .buttons-container {
+    position: sticky;
+    margin-top: 75px;
+    text-align: right;
+    width: 200px; /* Adjust the width of the buttons container */
+    padding-left: 20px;
+  }
+  
+  .button-wrapper {
+    margin-top: 10px;
+  }
+  
+  button {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    background-color: maroon;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+  }
+  
+  button:hover {
+    background-color: #800000;
+  }
+  
+  #emailsList {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #emailsList li {
+    margin-bottom: 20px;
+  }
+  
+  #emailsList li:last-child {
+    margin-bottom: 0;
+  }
+  
+  .card {
+    background-color: var(--nav-color);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .card:last-child {
+    margin-bottom: 0;
+  }
+  
+  .card strong {
+    display: block;
+    font-weight: bold;
+    color: var(--text-color);
+  }
+  
+  .card span {
+    display: block;
+    color: var(--text-color)
+  }
+  
+  .email-details-container #emailDetailsContainer {
+    display: none;
+    color: var(--text-color)
+  }
+  
+  .email-details-container #emailDetailsContainer h2 {
+    margin-top: 0;
+    color: var(--text-color)
+  }
+   

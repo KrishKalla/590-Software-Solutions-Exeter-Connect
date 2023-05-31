@@ -7,7 +7,7 @@
     <meta name = "viewport content = "width = device - width, initial-scale = 1.0">
 
     <!--  FONTS CSS  -->
-    <link rel = "stylesheet" href = "css.css">
+    <link rel = "stylesheet" href = "home.css">
     <link rel = "stylesheet" href = 'calendar.css'
    
 
@@ -24,10 +24,9 @@
 
             <div class="menu">
                 <ul class="nav-links">
-                    <li><a href = "#">Home</a></li>
-                    <li><a href = "#">Student Information</a></li>
-                    <li><a href = "#">Schedule</a></li>
-                    <li><a href = "#">Outlook</a></li>
+                    <li><a href = "http://localhost:3000/Home/home.html">Home</a></li>
+                    <li><a href = "http://localhost:3000/Schedule/schedule.html">Schedule</a></li>
+                    <li><a href = "http://localhost:3000/outlook/outlook.html">Outlook</a></li>
                     <li><a href = "#">Contact Devs.</a></li>
                 </ul>
             </div>
@@ -52,30 +51,24 @@
         </div>
     </nav>   
 
-
-    <!-- SIDEBAR -->
-    <div class="sidebar">
-        <ul class="widgets">
-            <li class = "widget1">
-                
-            </li>
-            <li class = "widget2">
-                
-            </li>
-            <li class = "widget3">
-                
-            </li>
-
-            <div class="extension">
-                
-            </div>
-
-            
-        </ul>
-
-        
-        
+    <div id="user-info">
+        <h2>User Information</h2>
+        <div id="info">
+            <p><strong>Name:</strong> <span id="name">Krish Kalla</span></p>
+            <p><strong>Date:</strong> <span id="date">31 May, 2023</span></p>
+            <p><strong>Email:</strong> <span id="email">kkalla@exeter.edu</span></p>
+            <p><strong>Birthday:</strong> <span id="birthday">26 October, 2007</span></p>
+        </div>
     </div>
+
+    
+
+    <div id="task-list-container">
+        <h2>To-Do List</h2>
+        <input type="text" id="task-input" placeholder="Add a task">
+        <button id="add-task-btn">Add</button>
+        <ul id="task-list"></ul>
+      </div>
 
     <!--CALENDAR -->
     <div class="calendar-main-container">
@@ -104,8 +97,10 @@
         </div>
     </div>
 
-    <script src = "webscript.js"></script>
+    <script src="https://alcdn.msauth.net/browser/2.15.0/js/msal-browser.min.js" integrity="sha384-2IToMH2hQs9C3kduF3RfygbxWTZQp3cPazqGiv0XwXvH4AlC3cDlLlYJjBZh2SzP" crossorigin="anonymous"></script>
+    <script src = "home.js"></script>
     <script src = "calendar.js"></script>
+    <script src = "info.js"></script>
     <!-- <script src = "canvas.js"></script> -->
 </body>
 </html>

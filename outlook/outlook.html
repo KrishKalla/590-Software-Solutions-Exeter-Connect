@@ -1,0 +1,78 @@
+<!-- http://localhost:3000/outlook/outlook.html -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset = "UTF-8">
+    <meta http-equiv = "X-UA-Compatible" content = "IE=edge">
+    <meta name = "viewport content = "width = device - width, initial-scale = 1.0">
+
+    <link rel="stylesheet" type="text/css" href="navbar/navbar.css">
+    <link rel="stylesheet" type="text/css" href="outlook.css" />
+    
+
+
+    <!--  BOXICONS CSS  -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  </head>
+  <body>
+<!-- NAVIGATION BAR -->
+    <nav>
+      <div class = "nav-bar">
+          <span class="logo"><a href = "#">Exeter Connect+</a></span>  <!--LOGO-->
+
+          <div class="menu">
+              <ul class="nav-links">
+                  <li><a href = "http://localhost:3000/Home/home.html">Home</a></li>
+                  <li><a href = "http://localhost:3000/Schedule/schedule.html">Schedule</a></li>
+                  <li><a href = "http://localhost:3000/outlook/outlook.html">Outlook</a></li>
+                  <li><a href = "#">Contact Devs.</a></li>
+              </ul>
+          </div>
+
+          <div class="darkLight-searchBox">
+              <div class="dark-light">
+                  <i class='bx bx-moon moon'></i> <!--DARK SYMBOL-->
+                  <i class='bx bx-sun sun' ></i> <!--LIGHT SYMBOL-->
+              </div>
+
+              <div class="searchBox">
+                  <div class="searchToggle">
+                      <i class='bx bx-x cancel' ></i> <!--CANCEL SYMBOL-->
+                      <i class='bx bx-search search' ></i> <!--SEARCH SYMBOL-->
+                  </div>
+                  <div class="search-field">
+                      <input type = "text" placeholder="Search...">
+                      <i class='bx bx-search' ></i> <!--SEARCH SYMBOL ON SEARCH BAR-->
+                  </div>
+              </div>
+          </div>
+      </div>
+    </nav>   
+
+    <div class="container">
+      <div class="email-list-container">
+        <!-- <h1>Emails</h1> -->
+        <ul id="emailsList"></ul>
+      </div>
+      <div class="email-details-container">
+        <!-- <h2>Email Details</h2> -->
+        <div id="emailDetailsContainer">
+          <div id="emailDetails"></div>
+        </div>
+      </div>
+      <div class="buttons-container">
+        <div class="button-wrapper">
+          <button id="loginBtn" disabled>Login</button>
+          <button id="fetchEmailsBtn" disabled>Fetch Emails</button>
+        </div>
+      </div>
+    </div>
+    
+    <script src="https://alcdn.msauth.net/browser/2.14.1/js/msal-browser.min.js"></script>
+    <script src="outlook.js"></script>
+    <script src = "navbar/navbar.js"></script>
+  </body>
+</html>

@@ -1,0 +1,365 @@
+/* Google Fonts Montserrat Import */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root{ 
+    --logo-color: maroon; 
+    --body-color: #GGGGGG;
+    --nav-color: #BEBEBE;
+    --side-nav: #BEBEBE;
+    --text-color: #010718;
+    --search-bar: #F2F2F2;
+    --search-text: #010718;
+    --calendar-header: #9A9A9A;
+    --calendar-body: #BEBEBE;
+    --calendar-button-color: #ABABAB;
+    --calendar-button-border: #282828;
+}
+
+body{
+    height: 100vh;
+    background-color: var(--body-color);
+}
+
+body.dark{
+    --body-color: #18191A;
+    --nav-color: #242526;
+    --side-nav: #242526;
+    --text-color: #CCC;
+    --search-bar: #242526;
+    --search-text: #CCC;
+    --calendar-header: #242424;
+    --calendar-body: #353535;
+    --calendar-button-color: #595959;
+    --calendar-button-border: #DCDCDC;
+}
+
+/* START OF NAVIGATION BAR CSS */
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    padding: 30px;
+    background-color: var(--nav-color);
+}
+
+nav .nav-bar{
+    position: relative;
+    height: 100%;
+    max-width: 1000px;
+    width: 100%;
+    background-color: var(--nav-color);
+    margin: 0 auto;
+    padding: 0 30 px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .nav-bar .logo a{
+    font-size: 30px;
+    font-weight: 1000;
+    color: var(--logo-color);
+    text-decoration: none;
+
+}
+
+nav .nav-bar .nav-links{
+    display: flex;
+    align-items: center;
+}
+
+.nav-bar .nav-links li{
+    margin: 0 5px;
+    list-style: none;
+}
+
+.nav-links li a{
+    position: relative;
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 10px;
+}
+
+.nav-bar .darkLight-searchBox{
+    display: flex;
+    align-items: center;
+}
+
+.darkLight-searchBox .dark-light, .darkLight-searchBox .searchToggle{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--nav-color);
+    margin: 0 5px;
+}
+
+.dark-light i, .searchToggle i{
+    position: absolute;
+    color: var(--text-color);
+    font-size: 22px;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.dark-light i.sun{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.dark-light.active i.sun{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.dark-light.active i.moon{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.searchToggle i.cancel{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.searchToggle.active i.cancel{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.searchToggle.active i.search{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.searchBox{
+    position: relative;
+}
+
+.searchBox .search-field{
+    position: absolute;
+    bottom: -75px;
+    right: 5px;
+    height: 50px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    background-color: var(--nav-color);
+    padding: 3px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3 ease;
+}
+
+.searchToggle.active ~ .search-field{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+.search-field input{
+    height: 100%;
+    width: 100%;
+    padding: 0 45px 0 15px;
+    outline: none;
+    border: none;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: 400; 
+    color: var(--search-text);
+    background-color: var(--search-bar);
+}
+
+body.dark .search-field i{
+    color: var(--text-color);
+}
+
+.search-field i{
+    position: absolute;
+    color: var(--nav-color);
+    right: 15px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* END OF NAVIGATION BAR CSS */
+
+/* START OF PERSONAL INFO CSS */
+
+h1 {
+    color: var(--logo-color);
+}
+
+
+  
+#user-info {
+border: 1px solid var(--text-color);
+border-radius: 40px;
+background-color: var(--calendar-body);
+border: none;
+width: 30%;
+Height: 22%;
+top: 110px;
+left: 100px;
+padding: 10px;
+margin-top: 20px;
+position: absolute;
+text-align: center;
+}
+
+#info {
+    text-align:left;
+    position: absolute;
+    left: 90px;
+    font-size: 30px;
+}
+
+h2 {
+font-size: 40px;
+margin-bottom: 30px;
+}
+
+p {
+margin: 0;
+}
+
+strong {
+    font-weight: bold;
+    font-size: 30px;
+    margin-right: 20px;
+    align-content:space-between;
+}
+
+#name,
+#date,
+#email,
+#birthday {
+    font-weight: bold;
+    color: var(--logo-color);
+}
+
+/* END OF PERSONAL INFO CSS */
+
+#task-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  /* Styles for task items */
+  #task-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  /* Styles for the remove button */
+  .remove-button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #ff4136;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .remove-button:hover {
+    background-color: #dc322f;
+  }
+  
+  /* Styles for the task input and add button */
+  #task-list-container {
+    border: none;
+    border-radius: 40px;
+    background-color: var(--calendar-body);
+    padding: 20px;
+    margin-top: 20px;
+    position: absolute;
+    text-align: center;
+    top: 400px;
+    left: 100px;
+    width: 30%;
+  }
+  
+
+  
+  
+  #task-list-container h2 {
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
+  
+  #task-input {
+    font-size: 20px;
+    padding: 8px;
+    width: 80%;
+    margin-bottom: 10px;
+  }
+  
+  #add-task-btn {
+    font-size: 20px;
+    padding: 8px 20px;
+    background-color: var(--logo-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  #add-task-btn:hover {
+    background-color: #800000;
+  }
+  
+  #task-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+  }
+  
+  #task-list li {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    background-color: var(--calendar-button-color);
+    color: white;
+    border-radius: 10px;
+    text-align: left;
+    word-break: break-all; /* Add this line */
+  }
+  
+  
+  #task-list li span {
+    flex-grow: 1;
+  }
+  
+  #task-list li button {
+    padding: 5px 10px;
+    background-color: #800000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  #task-list li button:hover {
+    background-color: #b30300;
+  }
+  
