@@ -2,7 +2,7 @@
 
 Instructions for Installation og Libraries
 1. run 'npm install' in terminal at the address of code
-	a. run 'npm fund' if necessary
+	1. run 'npm fund' if necessary
 2. run node server.js at address of code
 
 Opening the LocalHost Server in Browser
@@ -17,7 +17,7 @@ Opening the LocalHost Server in Browser
 For Outlook Page:
 Note: May need to open page (http://localhost:3000/outlook/outlook.html) in Incognito due to cached information in browser or clear cache before opening site
 1. Click "Login" Button in top right of screen
-	a. Enter in Microsoft Login Credentials
+	1. Enter in Microsoft Login Credentials
 2. If within the next few seconds, the emails do not show up on the left side, click on the "Fetch Emails" Button, and wait a few moments. Emails should show up. Else, close window and reopen page.
 
 For Schedule Page:
